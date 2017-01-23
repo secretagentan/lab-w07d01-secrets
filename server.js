@@ -28,6 +28,9 @@ app.get('/', function(req, res) {
 var secrets = require('./routes/secrets');
 app.use('/secrets', secrets);
 
+var lies = require('./routes/lies');
+app.use('/lies', lies);
+
 var port = process.env.PORT || 3000;
 app.listen(port, function() {
   console.log('Listening on port ' + port);

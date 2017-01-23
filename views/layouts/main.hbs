@@ -14,6 +14,7 @@
 <body>
 
   <div class="container">
+    <h1>😯 Shhh</h1>
 
     {{{body}}}
 
@@ -24,6 +25,11 @@
     <div class="message">\{{secret.message}}</div>
     <button class="like-btn" data-id=\{{_id}}>❤️</button>
     <span class="likes">\{{secret.likes}}</span>
+  </template>
+
+  <template id="lie-template">
+    <div class="lie-message">\{{lie.statement}}</div>
+    <div class="truth-message">\{{lie.truth}}</div>
   </template>
 
   <script src="/main.js"></script>

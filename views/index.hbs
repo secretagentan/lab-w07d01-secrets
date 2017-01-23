@@ -1,4 +1,3 @@
-<h1>😯 Shhh</h1>
 <p>Total secrets {{secrets.length}}</p>
 
 <input type="text" placeholder="Add a secret" name="new-secret">
@@ -12,5 +11,12 @@
   <span class="likes">{{secret.likes}}</span>
   <button class="remove-btn" data-id={{secret._id}}>X</button>
 </div>
+{{/each}}
 <br>
+<br>
+{{#each lies as |lie|}}
+<div class="lie">
+  <div class="lie-message" data-id={{lie._id}}>{{lie.lie}}</div>
+  <div class="truth-message" data-id={{lie._id}}>{{lie.truth}}</div>
+</div>
 {{/each}}

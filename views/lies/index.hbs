@@ -1,0 +1,10 @@
+<p>Total lies {{lies.length}}</p>
+<br>
+<br>
+{{#each lies as |lie|}}
+<div class="lie" data-id={{lie._id}}>
+  <div class="lie-message">LIE: {{lie.statement}}<br><span>TRUTH: {{lie.truth}}</span></div>
+</div>
+<br>
+<br>
+{{/each}}

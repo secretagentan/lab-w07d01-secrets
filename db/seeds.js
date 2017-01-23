@@ -8,6 +8,13 @@ var secrets = [
   {message: 'i have another family in canada', likes: 0},
 ];
 
+var lies = [
+  {
+    statement: "it was the biggest crowd ever",
+    truth: "it wasn't."
+  }
+];
+
 mongo.connect(url, function(err, db) {
   console.log('emptying collection');
   db.collection(collection).remove({}, function(err, result) {

@@ -4,7 +4,9 @@ var $input = $('input');
 var $addBtn = $('.add-btn');
 var $deleteBtn = $('.remove-btn')
 var $message = $(".message");
-$input.focus();
+// var $focus = $("#focus");
+// $input.focus();
+// $focus.focus();
 
 $addBtn.on('click', function(evt) {
   var newSecret = $input.val();
