@@ -1,10 +1,16 @@
 <h1>😯 Shhh</h1>
 <p>Total secrets {{secrets.length}}</p>
 
+<input type="text" placeholder="Add a secret" name="new-secret">
+<button type="submit" class="add-btn">Submit</button>
+<br>
+<br>
 {{#each secrets as |secret|}}
 <div class="secret">
-  <div class="message">{{secret.message}}</div>
+  <div class="message" data-id={{secret._id}}>{{secret.message}}</div>
   <button class="like-btn" data-id={{secret._id}}>❤️</button>
   <span class="likes">{{secret.likes}}</span>
+  <button class="remove-btn" data-id={{secret._id}}>X</button>
 </div>
+<br>
 {{/each}}
