@@ -2,7 +2,7 @@
 
 - [ ] Update `main.hbs` to include a form to add a secret.
 
-When a user adds a secret submit the values via AJAX and render a new secret.
+When a user adds a secret submit the values via AJAX and render the new secret.
 
 - [ ] Update the templates to include a "Remove" button with an "X"
 

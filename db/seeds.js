@@ -1,6 +1,6 @@
 var mongo = require('mongodb').MongoClient;
 var ObjectID = require('mongodb').ObjectID;
-var url = process.env.MONGODB_URI || 'mongodb://localhost:27017/sandbox';
+var url = process.env.MONGODB_URI || 'mongodb://localhost:27017/secrets_app';
 var collection = 'secrets';
 
 var secrets = [
@@ -9,7 +9,9 @@ var secrets = [
 ];
 
 mongo.connect(url, function(err, db) {
+  console.log('emptying collection');
   db.collection(collection).remove({}, function(err, result) {
+    console.log('seeding collection');
     db.collection(collection).insert(secrets, function(err, result) {
       db.close();
       console.log(result);

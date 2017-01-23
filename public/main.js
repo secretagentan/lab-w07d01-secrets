@@ -16,4 +16,3 @@ function render(secret) {
   var compile = Handlebars.compile(temp);
   return compile({secret: secret});
 }
-
