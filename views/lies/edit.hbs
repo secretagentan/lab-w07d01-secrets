@@ -1,5 +1,5 @@
-<form action="/lies" method="POST">
-  <input type="text" name="lie" value={{lie.lie}}>
-  <input type="text" name="truth" value={{lie.truth}}>
+<form action="/lies?{{_id}}?_method=PUT" method="POST">
+  <input type="text" name="lie" value="{{statement}}">
+  <input type="text" name="truth" value="{{truth}}">
   <button id='lie-btn'>Submit</button>
 </form>

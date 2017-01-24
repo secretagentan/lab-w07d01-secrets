@@ -34,7 +34,7 @@ router.get('/new', function(req, res) {
   res.render('./lies/new');
 })
 
-router.get('/lies/:liesID/edit', function(req, res) {
+router.get('/:liesID/edit', function(req, res) {
   var id = req.params.liesID;
   mongo.connect(url, function(err, db) {
     db.collection(collection).find({_id: ObjectID(id)}).toArray(function(err, lie) {

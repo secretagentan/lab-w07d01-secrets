@@ -1,6 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var hbs  = require('express-handlebars');
+var methodOverride = require('method-override');
 
 // db
 var mongo = require('mongodb').MongoClient;
@@ -15,6 +16,7 @@ app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+app.use(methodOverride('_method'))
 
 app.get('/', function(req, res) {
   mongo.connect(url, function(err, db) {
